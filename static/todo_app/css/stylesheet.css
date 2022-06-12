@@ -1,0 +1,48 @@
+h1, form, input {
+    text-align: center;
+    color:white;
+}
+
+form {
+    margin-top: 60px;
+}
+
+div {
+    margin: 20px;
+}
+
+#btn {
+    padding: 15px 40px;
+    margin: 20px;
+    background-color: white;
+    color: rgb(7, 6, 6)
+    ;
+}
+
+input.int {
+
+    width: 60%;
+}
+
+body{
+    background-color: darkcyan;
+    
+}
+table.style{
+    background-color:  white;
+    padding: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+thead.st{
+    background-color: powderblue;
+}
+
+tr.tr{
+    background-color: aliceblue;
+    height: 50px;
+
+}

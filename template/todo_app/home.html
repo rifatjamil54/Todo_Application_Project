@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todo_app/css/stylesheet.css' %}">
+    <title>Todo App</title>
+</head>
+<body>
+    <h1>Todo App</h1>
+
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+                <input class="int" type="text" name="data" id="btn" placeholder="add new task..."/>
+                <button type="submit" style="padding: 16px;"> Add </button>
+        </form>
+    </div><br>
+
+    <table class="style">
+        <thead class="st">
+            <tr>
+                <th>List</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for td in todo_data %}
+            <tr class="tr">
+                <td>{{td.data}}</td>
+                <td>
+                    <button><a style="text-decoration: none; color: black; " href="/edit/{{ td.id }}"><span class="glyphicon glyphicon-pencil">Edit</span></a></button>
+                    <button><a style="text-decoration: none; color: black; " href="/delete/{{ td.id }}">Delete</a></button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
